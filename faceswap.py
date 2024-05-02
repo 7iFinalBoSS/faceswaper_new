@@ -22,6 +22,10 @@ models_dir = os.path.abspath("models/roop")
 downloaded_model_path = download_model(model_url, models_dir)
 print(f"Model downloaded to: {downloaded_model_path}")
 
+import subprocess
+
+command = "wget https://github.com/TencentARC/GFPGAN/releases/download/v1.3.0/GFPGANv1.3.pth -P experiments/pretrained_models"
+subprocess.run(command, shell=True, check=True)
 
 
 
